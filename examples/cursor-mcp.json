@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "enterno": {
+      "url": "https://enterno.io/mcp",
+      "headers": { "Authorization": "Bearer ${env:ENTERNO_API_KEY}" }
+    }
+  }
+}

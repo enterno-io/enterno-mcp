@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "enterno": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote@0.15.1", "https://enterno.io/mcp", "--header", "Authorization:${ENTERNO_AUTH}"],
+      "env": { "ENTERNO_AUTH": "Bearer ent_your_key" }
+    }
+  }
+}

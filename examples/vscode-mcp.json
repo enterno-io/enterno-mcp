@@ -1,0 +1,17 @@
+{
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "enterno-api-key",
+      "description": "Enterno.io API key (ent_…)",
+      "password": true
+    }
+  ],
+  "servers": {
+    "enterno": {
+      "type": "http",
+      "url": "https://enterno.io/mcp",
+      "headers": { "Authorization": "Bearer ${input:enterno-api-key}" }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "context_servers": {
+    "enterno": {
+      "url": "https://enterno.io/mcp",
+      "headers": { "Authorization": "Bearer ent_your_key" }
+    }
+  }
+}
