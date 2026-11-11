@@ -1,0 +1,6 @@
+# Enterno.io MCP server for Codex CLI: add to ~/.codex/config.toml.
+# Free key: https://enterno.io/en/register. Codex reads it from the environment:
+#   export ENTERNO_API_KEY=ent_...
+[mcp_servers.enterno]
+url = "https://enterno.io/mcp"
+bearer_token_env_var = "ENTERNO_API_KEY"
