@@ -9,7 +9,8 @@ GET https://enterno.io/api/open/<tool>?q=<target>[&format=json|text|csv][&extra=
   `cookie` 30). Read `X-RateLimit-Limit`, `X-RateLimit-Remaining`, `X-RateLimit-Reset` (Unix seconds);
   HTTP 429 means wait until the reset.
 - `format=json` for parsing, `format=text` for a flat `key: value` view that is easy to quote.
-- An error may come back with HTTP 200 as `{"error": "..."}`. Treat it as a failed check. Success markers differ
+- Answers are in English by default; `&lang=ru` returns Russian. A refused check answers with a 4xx status and
+  `{"error": "..."}`. Treat any `error` field as a failed check. Success markers differ
   (`status: ok`, `status: success` or none), so test for `error`, not for `status`.
 - Private, loopback and internal targets are refused.
 - The live list is at `GET https://enterno.io/api/open/` (plain text).
