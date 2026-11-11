@@ -69,5 +69,5 @@ Template: `templates/zed-settings.json`. The key sits in the user-level Zed sett
 ## Check the connection
 
 After restarting the client, the tools `check_http`, `check_ssl`, `check_dns` and others appear. Without a key the
-server answers HTTP 401 `API key required`. Some tools need a paid Enterno.io plan and return a plan error on a
-free key; the rest work.
+server answers HTTP 401 `API key required`. Every tool works on a free key; the plan sets how
+many calls a day the key gets.
