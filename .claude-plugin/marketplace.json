@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "enterno-io",
+  "owner": {
+    "name": "Enterno.io",
+    "url": "https://enterno.io"
+  },
+  "metadata": {
+    "description": "Website and domain diagnostics for AI agents by Enterno.io"
+  },
+  "plugins": [
+    {
+      "name": "enterno-website-diagnostics",
+      "source": "./",
+      "description": "Website and domain diagnostics: HTTP, redirects, SSL/TLS, DNS, MX, DKIM, WHOIS, propagation, CSP, CORS, cookies, robots.txt and structured data. 19 checks with no signup; 40+ with the free Enterno.io MCP key.",
+      "version": "1.0.0",
+      "category": "development"
+    }
+  ]
+}
