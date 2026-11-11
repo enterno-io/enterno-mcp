@@ -70,6 +70,24 @@ npx skills add enterno-io/enterno-mcp --skill enterno-website-diagnostics
 /plugin install enterno-website-diagnostics@enterno-io
 ```
 
+**Codex, Gemini CLI, GitHub Copilot CLI und Cursor** – dasselbe Repository ist auch für sie ein Plugin
+(Agent-Plugins-Standard und Gemini-CLI-Erweiterung):
+
+```bash
+# Codex
+codex plugin marketplace add enterno-io/enterno-mcp
+codex plugin add enterno-website-diagnostics@enterno-io
+
+# Gemini CLI
+gemini extensions install https://github.com/enterno-io/enterno-mcp
+
+# GitHub Copilot CLI
+copilot plugin install enterno-io/enterno-mcp
+
+# Cursor
+npx skills add enterno-io/enterno-mcp --skill enterno-website-diagnostics -a cursor
+```
+
 **Manuell** – kopieren Sie [`skills/enterno-website-diagnostics`](skills/enterno-website-diagnostics/) in den
 Skills-Ordner Ihres Agenten, z. B. `~/.claude/skills/` bei Claude Code.
 

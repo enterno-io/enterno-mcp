@@ -1,0 +1,16 @@
+{
+  "name": "enterno-io",
+  "owner": {
+    "name": "Enterno.io"
+  },
+  "metadata": {
+    "description": "Website and domain diagnostics for AI agents by Enterno.io"
+  },
+  "plugins": [
+    {
+      "name": "enterno-website-diagnostics",
+      "source": "./",
+      "description": "Website and domain diagnostics: HTTP, redirects, SSL/TLS, DNS, MX, DKIM, WHOIS, propagation, CSP, CORS, cookies, robots.txt and structured data."
+    }
+  ]
+}
