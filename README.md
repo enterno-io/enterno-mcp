@@ -18,7 +18,7 @@ its source code is not part of this repository.
 | Transport | Streamable HTTP (JSON-RPC 2.0), protocol version `2024-11-05` |
 | Authentication | API key: `Authorization: Bearer ent_…` or `X-API-Key: ent_…` |
 | API key | Free — create an account at <https://enterno.io/en/register>, then create a key in the dashboard |
-| Tools | <!-- tools:count -->43 tools (server card, 2026-10-20)<!-- /tools:count --> — full list in [TOOLS.md](TOOLS.md) |
+| Tools | <!-- tools:count -->49 tools (server card, 2026-11-11)<!-- /tools:count --> — full list in [TOOLS.md](TOOLS.md) |
 | Discovery | [`/.well-known/mcp.json`](https://enterno.io/.well-known/mcp.json), [`/.well-known/mcp/server-card.json`](https://enterno.io/.well-known/mcp/server-card.json) |
 | Documentation | <https://enterno.io/en/mcp-server> |
 
@@ -88,6 +88,16 @@ Restart Claude Desktop. The key sits in plain text in this user-level file, so k
 deliberately. Its README also documents `--header-file`, which reads the header from a separate file instead of
 the config.
 
+### Codex CLI
+
+`~/.codex/config.toml` — Codex reads the token from the environment (`export ENTERNO_API_KEY=ent_...`):
+
+```toml
+[mcp_servers.enterno]
+url = "https://enterno.io/mcp"
+bearer_token_env_var = "ENTERNO_API_KEY"
+```
+
 ### Cursor
 
 `~/.cursor/mcp.json` (global) or `.cursor/mcp.json` (project). Cursor reads `${env:NAME}` from your environment:
@@ -148,6 +158,17 @@ curl -s https://enterno.io/mcp \
 ```
 
 More in [`examples/curl.sh`](examples/curl.sh).
+
+## Agent skill
+
+[`skills/enterno-website-diagnostics`](skills/enterno-website-diagnostics/SKILL.md) teaches an agent when and how
+to run these checks and how to turn them into a report: "is the site down", pre-launch and post-migration
+checklists, security headers and cookies, email deliverability, certificate expiry. It works with no key through
+the open API (19 checks) and uses the MCP server when it is connected.
+
+```bash
+npx skills add enterno-io/enterno-mcp --skill enterno-website-diagnostics
+```
 
 ## Example prompts
 

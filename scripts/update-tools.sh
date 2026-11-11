@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Regenerate TOOLS.md and the tool count in README.md from the public server card.
+# Regenerate TOOLS.md (and its copy in the agent skill) and the tool count in README.md from the public server card.
 # Source of truth: https://enterno.io/.well-known/mcp/server-card.json (public, no key needed).
 # Usage: scripts/update-tools.sh   (needs bash, curl, jq; run from anywhere)
 set -euo pipefail
@@ -35,5 +35,8 @@ COUNT="$(jq '.tools | length' "$TMP")"
 
 # Replace the marked count/date in README.md, nothing else.
 sed -i -E "s|<!-- tools:count -->[^<]*<!-- /tools:count -->|<!-- tools:count -->${COUNT} tools (server card, ${TODAY})<!-- /tools:count -->|" "$ROOT/README.md"
+
+# The agent skill ships the same list as its reference file.
+cp "$ROOT/TOOLS.md" "$ROOT/skills/enterno-website-diagnostics/references/mcp-tools.md"
 
 echo "TOOLS.md: $COUNT tools from $CARD_URL"
