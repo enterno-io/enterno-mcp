@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "enterno-website-diagnostics",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Website and domain diagnostics for AI agents: HTTP, redirects, SSL/TLS, DNS, MX, DKIM, WHOIS, DNS propagation, CSP, CORS, cookies, robots.txt and structured data. 19 checks with no signup; a free Enterno.io key adds 40+ MCP tools (SEO audit, AI-readiness, security grade).",
   "author": {
     "name": "Enterno.io",
