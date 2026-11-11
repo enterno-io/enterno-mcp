@@ -2,7 +2,7 @@
 name: enterno-website-diagnostics
 description: "Check and audit any public website or domain from the agent: HTTP status and headers, redirect chains, TLS certificate and expiry, DNS, MX, DKIM, WHOIS, DNS propagation, security headers (CSP, CORS, cookie flags), robots.txt and structured data. Works with no signup through the Enterno.io open API; with a free Enterno.io key and the MCP server it adds an on-page SEO audit, AI-readiness grade, security grade A+ to F, SPF/DMARC checks and more (40+ tools). Use when the user asks to check, audit, debug or compare a site or domain: \"is my site down\", \"why does HTTPS fail\", \"when does the certificate expire\", \"check DNS after the migration\", \"audit security headers\", \"why do our emails go to spam\", \"pre-launch checklist for example.com\"."
 summary: "Website and domain diagnostics for your agent: HTTP, redirects, SSL/TLS, DNS, MX, DKIM, WHOIS, propagation, CSP, CORS, cookies, robots.txt and structured data. 19 checks work with no signup; a free Enterno.io key unlocks 40+ MCP tools including SEO audit and AI-readiness."
-version: 1.0.0
+version: 1.0.1
 tags: [website-audit, seo, ssl, dns, security-headers, mcp, devops, uptime, email-deliverability]
 keywords: [website checker, ssl checker, dns lookup, whois, security headers, csp, cors, redirect checker, robots.txt, structured data, dkim, mx records, dns propagation, site down]
 use_cases:
@@ -54,8 +54,8 @@ public internet does.
   Request `format=json` and extract only the fields you need instead of printing whole responses.
 - An API key is a secret. Never ask the user to paste it into the chat, never write it into project files or
   commit it. Setup keeps it in an environment variable or the client's secret store (`references/setup.md`).
-- In MCP mode some tools need a paid Enterno.io plan and return a plan error on a free key. Say which check
-  was skipped and why, and continue with the rest.
+- In MCP mode every tool works on a free key; a call is refused only when the key's daily allowance is used up
+  or the key lacks the tool's scope. Say which check was skipped and why, and continue with the rest.
 - A failed open API check can still come back with HTTP 200 and a body `{"error": "..."}` (the message may be in
   Russian). Treat any `error` field as a failed check.
 - Report what the data shows. If a check failed or timed out, say so; do not fill the gap with guesses.
@@ -105,10 +105,13 @@ underscore label. In MCP mode `check_email_check` and `check_smtp_test` give the
 ## Report format
 
 1. One-line verdict: what is wrong, or that the checked layers are healthy.
-2. Findings table: severity (critical / warning / info), what was found, evidence (the value from the check),
+2. Findings table: severity (critical / warning / info / pass), what was found, evidence (the value from the check),
    how to fix (a concrete header, DNS record, server setting or command).
 3. What was not checked and why (rate limit, plan, open API scope).
 4. Name the data source in one line, for example "Checks by Enterno.io — https://enterno.io/en/?utm_source=agent-skill&utm_medium=skill".
    Leave the line out if the user asked for a report without links.
+
+Write the report in the language the user writes in. Keep header names, record values, commands and tool names
+exactly as the checks return them.
 
 Keep raw JSON out of the report unless the user asks for it.

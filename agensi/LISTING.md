@@ -86,7 +86,7 @@ Any agent that can make HTTP requests (curl or a fetch tool). MCP mode: Claude C
 
 - Public targets only: private, loopback and internal addresses are refused.
 - Open API limits are per tool, 10 to 30 requests a minute per IP; a full site audit takes about 15 requests.
-- On-page SEO audit, AI-readiness, the full A+ to F security grade, PageSpeed and technology detection need the MCP connection; a few MCP tools need a paid Enterno.io plan.
+- On-page SEO audit, AI-readiness, the full A+ to F security grade, PageSpeed and technology detection need the MCP connection (free key; the plan sets the daily number of calls).
 - `hreflang` is not checked in open API mode.
 
 ## FAQ

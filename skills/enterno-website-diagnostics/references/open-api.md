@@ -36,7 +36,7 @@ GET https://enterno.io/api/open/<tool>?q=<target>[&format=json|text|csv][&extra=
 | `protocol` | HTTP version (1.1, 2, 3) and TLS negotiation; the `bench` timings are noisy, do not rely on them | URL | |
 | `url-expand` | Where a short link leads | URL | |
 
-Not in the open API (MCP server; a few tools need a paid plan): on-page SEO audit, AI-readiness, the full security grade
+Not in the open API (MCP server, free key): on-page SEO audit, AI-readiness, the full security grade
 (the `headers` grade covers headers only),
 SPF/DKIM/DMARC in one check, SMTP STARTTLS test, PageSpeed, technology and CMS detection,
 mixed content, Wayback history, reverse IP. See `mcp-tools.md` and `setup.md`.
