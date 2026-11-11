@@ -80,7 +80,8 @@ codex plugin add enterno-website-diagnostics@enterno-io
 gemini extensions install https://github.com/enterno-io/enterno-mcp
 
 # GitHub Copilot CLI
-copilot plugin install enterno-io/enterno-mcp
+copilot plugin marketplace add enterno-io/enterno-mcp
+copilot plugin install enterno-website-diagnostics@enterno-io
 
 # Cursor
 npx skills add enterno-io/enterno-mcp --skill enterno-website-diagnostics -a cursor
