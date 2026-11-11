@@ -68,6 +68,24 @@ npx skills add enterno-io/enterno-mcp --skill enterno-website-diagnostics
 /plugin install enterno-website-diagnostics@enterno-io
 ```
 
+**Codex、Gemini CLI、GitHub Copilot CLI 和 Cursor** —— 同一个仓库也是它们的插件
+（Agent Plugins 标准和 Gemini CLI 扩展）：
+
+```bash
+# Codex
+codex plugin marketplace add enterno-io/enterno-mcp
+codex plugin add enterno-website-diagnostics@enterno-io
+
+# Gemini CLI
+gemini extensions install https://github.com/enterno-io/enterno-mcp
+
+# GitHub Copilot CLI
+copilot plugin install enterno-io/enterno-mcp
+
+# Cursor
+npx skills add enterno-io/enterno-mcp --skill enterno-website-diagnostics -a cursor
+```
+
 **手动安装** —— 将 [`skills/enterno-website-diagnostics`](skills/enterno-website-diagnostics/) 复制到智能体的
 技能目录，例如 Claude Code 的 `~/.claude/skills/`。
 

@@ -68,6 +68,24 @@ npx skills add enterno-io/enterno-mcp --skill enterno-website-diagnostics
 /plugin install enterno-website-diagnostics@enterno-io
 ```
 
+**Codex、Gemini CLI、GitHub Copilot CLI、Cursor** —— 同じリポジトリがこれらのプラグインとしても使えます
+（Agent Plugins 標準と Gemini CLI 拡張機能）：
+
+```bash
+# Codex
+codex plugin marketplace add enterno-io/enterno-mcp
+codex plugin add enterno-website-diagnostics@enterno-io
+
+# Gemini CLI
+gemini extensions install https://github.com/enterno-io/enterno-mcp
+
+# GitHub Copilot CLI
+copilot plugin install enterno-io/enterno-mcp
+
+# Cursor
+npx skills add enterno-io/enterno-mcp --skill enterno-website-diagnostics -a cursor
+```
+
 **手動** —— [`skills/enterno-website-diagnostics`](skills/enterno-website-diagnostics/) をエージェントの
 スキルフォルダにコピーします（Claude Code の場合は `~/.claude/skills/`）。
 

@@ -68,6 +68,24 @@ npx skills add enterno-io/enterno-mcp --skill enterno-website-diagnostics
 /plugin install enterno-website-diagnostics@enterno-io
 ```
 
+**Codex, Gemini CLI, GitHub Copilot CLI, Cursor** — 같은 저장소가 이 도구들의 플러그인이기도 합니다
+(Agent Plugins 표준과 Gemini CLI 확장):
+
+```bash
+# Codex
+codex plugin marketplace add enterno-io/enterno-mcp
+codex plugin add enterno-website-diagnostics@enterno-io
+
+# Gemini CLI
+gemini extensions install https://github.com/enterno-io/enterno-mcp
+
+# GitHub Copilot CLI
+copilot plugin install enterno-io/enterno-mcp
+
+# Cursor
+npx skills add enterno-io/enterno-mcp --skill enterno-website-diagnostics -a cursor
+```
+
 **수동 설치** — [`skills/enterno-website-diagnostics`](skills/enterno-website-diagnostics/) 폴더를 에이전트의
 스킬 폴더(예: Claude Code는 `~/.claude/skills/`)에 복사합니다.
 
