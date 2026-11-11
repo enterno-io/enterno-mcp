@@ -170,6 +170,13 @@ the open API (19 checks) and uses the MCP server when it is connected.
 npx skills add enterno-io/enterno-mcp --skill enterno-website-diagnostics
 ```
 
+In Claude Code the repository is also a plugin marketplace:
+
+```text
+/plugin marketplace add enterno-io/enterno-mcp
+/plugin install enterno-website-diagnostics@enterno-io
+```
+
 ## Example prompts
 
 - "Is example.com reachable? Check its HTTP status and response time."

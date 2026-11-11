@@ -1,0 +1,14 @@
+{
+  "name": "enterno-website-diagnostics",
+  "displayName": "Enterno.io Website Diagnostics",
+  "description": "Check and audit any public website or domain from Claude Code: HTTP status and headers, redirects, SSL/TLS, DNS, MX, DKIM, WHOIS, DNS propagation, CSP, CORS, cookies, robots.txt and structured data. 19 checks work with no signup through the Enterno.io open API; a free key and the Enterno.io MCP server add 40+ tools (SEO audit, AI-readiness, security grade).",
+  "version": "1.0.0",
+  "author": {
+    "name": "Enterno.io",
+    "url": "https://enterno.io/en/mcp-server?utm_source=claude-plugin&utm_medium=plugin&utm_campaign=website-diagnostics"
+  },
+  "homepage": "https://enterno.io/en/mcp-server?utm_source=claude-plugin&utm_medium=plugin&utm_campaign=website-diagnostics",
+  "repository": "https://github.com/enterno-io/enterno-mcp",
+  "license": "MIT",
+  "keywords": ["website-audit", "ssl", "dns", "security-headers", "seo", "whois", "email-deliverability", "mcp"]
+}
