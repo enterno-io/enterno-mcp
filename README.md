@@ -31,6 +31,10 @@
   <a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="MIT license"></a>
 </p>
 
+<p align="center">
+  <a href="https://glama.ai/mcp/connectors/io.enterno/site-diagnostics"><img src="https://glama.ai/mcp/connectors/io.enterno/site-diagnostics/badges/score.svg" alt="Enterno.io MCP connector on Glama"></a>
+</p>
+
 ---
 
 The **`enterno-website-diagnostics` agent skill** teaches Claude Code, Codex, Cursor and other agents how to check a
